@@ -32,7 +32,6 @@
                 "input": "public"
               }
             ],
-            "styles": ["src/custom-theme.sass"],
             "scripts": [],
             "server": "src/main.server.ts",
             "prerender": true,
