@@ -1,0 +1,27 @@
+@use '@angular/material' as mat
+
+$light-theme: mat.define-theme()
+$dark-theme: mat.define-theme((color: (theme-type: dark)))
+
+*,
+*::before,
+*::after
+  box-sizing: border-box
+  margin: 0
+
+html
+  @include mat.all-component-themes($light-theme)
+
+body
+  background-color: var(--mat-app-background-color)
+  color: var(--mat-app-text-color)
+
+.app
+  height: 100%
+  min-height: 100vh
+  display: flex
+  flex-direction: column
+
+a
+  text-decoration: none
+  color: inherit

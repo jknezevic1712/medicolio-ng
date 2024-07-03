@@ -1,0 +1,13 @@
+@if (to) {
+
+<a [href]="to">
+  <button mat-raised-button>
+    <ng-content />
+  </button>
+</a>
+
+} @else {
+
+<button mat-raised-button></button>
+
+}

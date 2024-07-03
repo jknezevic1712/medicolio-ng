@@ -1,0 +1,22 @@
+.header
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  align-items: center
+  padding: 1rem
+  gap: 1rem
+  border-bottom: 0.2rem solid var(--mat-app-text-color)
+
+  @media screen and (min-width: 768px)
+    flex-wrap: nowrap
+    justify-content: space-between
+    gap: 0
+
+.header-title
+  font-size: 2rem
+
+.nav
+  display: flex
+  justify-content: center
+  align-items: center
+  gap: 0.5rem

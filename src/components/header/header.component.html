@@ -1,0 +1,16 @@
+<header class="header">
+  <h2 class="header-title">
+    <a href="/">Medicolio<library-title /></a>
+  </h2>
+  <nav class="nav">
+    @if (userExists) {
+    <base-button to="/">Patients</base-button>
+    <base-button to="/doctor/1">Profile</base-button>
+    <base-button color="destructive" (click)="(handleLogout)">
+      Logout
+    </base-button>
+    } @else {
+    <base-button to="/auth">Register</base-button>
+    }
+  </nav>
+</header>
