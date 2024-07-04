@@ -1,13 +1,17 @@
+<ng-template #btnContent><ng-content /></ng-template>
+
 @if (to) {
 
 <a [href]="to">
   <button mat-raised-button>
-    <ng-content />
+    <ng-container *ngTemplateOutlet="btnContent" />
   </button>
 </a>
 
 } @else {
 
-<button mat-raised-button></button>
+<button mat-raised-button>
+  <ng-container *ngTemplateOutlet="btnContent" />
+</button>
 
 }

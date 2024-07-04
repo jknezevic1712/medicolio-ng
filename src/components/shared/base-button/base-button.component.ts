@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 // components
 import { MatButtonModule } from '@angular/material/button';
@@ -6,7 +7,7 @@ import { MatButtonModule } from '@angular/material/button';
   standalone: true,
   selector: 'base-button',
   templateUrl: 'base-button.component.html',
-  imports: [MatButtonModule],
+  imports: [MatButtonModule, CommonModule],
 })
 export class BaseButton {
   @Input({ required: false }) to?: string;
