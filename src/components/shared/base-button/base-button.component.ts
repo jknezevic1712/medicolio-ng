@@ -9,7 +9,7 @@ import { MatButtonModule } from '@angular/material/button';
   templateUrl: 'base-button.component.html',
   imports: [MatButtonModule, CommonModule],
 })
-export class BaseButton {
+export class BaseButtonComponent {
   @Input({ required: false }) to?: string;
   @Input({ required: false }) color?: 'primary' | 'destructive';
   @Input({ required: false }) disabled?: boolean;

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 // components
-import { BaseButton } from '@components/shared/base-button/base-button.component';
+import { BaseButtonComponent } from '@components/shared/base-button/base-button.component';
 import { LibraryTitle } from './library-title/library-title.component';
 
 @Component({
@@ -8,7 +8,7 @@ import { LibraryTitle } from './library-title/library-title.component';
   selector: 'the-header',
   templateUrl: 'header.component.html',
   styleUrl: 'header.component.sass',
-  imports: [BaseButton, LibraryTitle],
+  imports: [BaseButtonComponent, LibraryTitle],
 })
 export default class HeaderComponent {
   userExists = false;

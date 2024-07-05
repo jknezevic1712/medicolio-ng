@@ -1,15 +1,15 @@
 import { Component } from '@angular/core';
 // components
-import { Location } from '@angular/common';
+import { BaseButtonComponent } from '@/components/shared/base-button/base-button.component'; // utils
 // utils
-import { BaseButton } from '@/components/shared/base-button/base-button.component';
+import { Location } from '@angular/common';
 
 @Component({
   standalone: true,
   selector: 'page-not-found',
   templateUrl: 'page-not-found.component.html',
   styleUrl: 'page-not-found.component.sass',
-  imports: [BaseButton],
+  imports: [BaseButtonComponent],
 })
 export class PageNotFoundComponent {
   constructor(private location: Location) {}
