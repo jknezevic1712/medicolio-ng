@@ -1,16 +1,22 @@
 import { Routes } from '@angular/router';
-// components
-import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 export const routes: Routes = [
   {
     path: '',
-    loadComponent: () => import('./app.component').then((m) => m.AppComponent),
+    redirectTo: 'dashboard',
+    pathMatch: 'full',
+  },
+  {
+    path: 'dashboard',
+    loadComponent: () =>
+      import('./pages/dashboard/dashboard.component').then(
+        (m) => m.DashboardComponent
+      ),
   },
   {
     path: '**',
     loadComponent: () =>
-      import('./page-not-found/page-not-found.component').then(
+      import('./pages/page-not-found/page-not-found.component').then(
         (m) => m.PageNotFoundComponent
       ),
   },

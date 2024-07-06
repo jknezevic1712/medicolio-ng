@@ -1,7 +1,7 @@
 import { Component, ViewEncapsulation } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 // components
-import HeaderComponent from '@components/header/header.component';
+import HeaderComponent from '@app/components/header/header.component';
 
 @Component({
   selector: 'the-layout',
