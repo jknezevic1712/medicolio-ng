@@ -5,7 +5,11 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@app/*": ["src/app/*"]
+      "@app/*": ["src/app/*"],
+      "@services/*": ["src/services/*"],
+      "@dtos/*": ["src/dtos/*"],
+      "@repositories/*": ["src/repositories/*"],
+      "@environments/*": ["src/environments/*"]
     },
     "outDir": "./dist/out-tsc",
     "strict": true,
