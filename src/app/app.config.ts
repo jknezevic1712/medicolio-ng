@@ -7,6 +7,7 @@ import {
 import { provideRouter, Router, withViewTransitions } from '@angular/router';
 import { routes } from './app.routes';
 import { provideClientHydration } from '@angular/platform-browser';
+import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 // types
 import type { IsActiveMatchOptions } from '@angular/router';
 
@@ -36,5 +37,6 @@ export const appConfig: ApplicationConfig = {
       })
     ),
     provideClientHydration(),
+    provideAnimationsAsync(),
   ],
 };
