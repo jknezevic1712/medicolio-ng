@@ -30,3 +30,28 @@ a
 h1, h2, h3, h4, h5
   margin: 0!important
   padding: 0!important
+
+.transition-component
+  view-transition-name: transition-component
+
+@keyframes in
+  0%
+    opacity: 0
+    transform: translateX(-100%)
+  100%
+    opacity: 1
+    transform: translateX(0)
+
+@keyframes out
+  0%
+    opacity: 1
+    transform: translateX(0)
+  100%
+    opacity: 0
+    transform: translateX(100%)
+
+::view-transition-old(transition-component)
+  animation: out 500ms ease 0s 1 normal forwards
+
+::view-transition-new(transition-component)
+  animation: in 500ms ease 0s 1 normal forwards
