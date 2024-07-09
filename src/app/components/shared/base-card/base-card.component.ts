@@ -10,7 +10,6 @@ import {
   standalone: true,
   selector: 'base-card',
   templateUrl: 'base-card.component.html',
-  styleUrl: 'base-card.component.sass',
   imports: [MatCard, MatCardHeader, MatCardContent, MatCardActions],
 })
 export class BaseCardComponent {}
