@@ -4,6 +4,77 @@
       <div header>
         <h2>Authentication</h2>
       </div>
+
+      <div content>
+        <form
+          id="auth-form"
+          #authForm="ngForm"
+          class="auth-form"
+          (ngSubmit)="handleSubmit(authForm)"
+        >
+          <mat-form-field>
+            <mat-label>Email</mat-label>
+            <input name="email" type="email" matInput ngModel required />
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Password</mat-label>
+            <input name="password" type="password" matInput ngModel required />
+          </mat-form-field>
+
+          @if (!isLogin) {
+
+          <mat-form-field>
+            <mat-label>Name</mat-label>
+            <input
+              name="name"
+              type="text"
+              matInput
+              ngModel
+              [required]="!isLogin"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>PIN</mat-label>
+            <input
+              name="pin"
+              type="number"
+              matInput
+              ngModel
+              [required]="!isLogin"
+            />
+          </mat-form-field>
+
+          <mat-form-field>
+            <mat-label>Title</mat-label>
+            <input
+              name="title"
+              type="text"
+              matInput
+              ngModel
+              [required]="!isLogin"
+            />
+          </mat-form-field>
+
+          }
+
+          <div class="auth-form-actions">
+            <base-button
+              [fullWidth]="true"
+              form="auth-form"
+              type="submit"
+              [disabled]="!authForm.form.valid"
+            >
+              Submit
+            </base-button>
+          </div>
+        </form>
+
+        <div class="auth-type">
+          <span (click)="switchAuthType()">{{ authTypeSwitchText }}</span>
+        </div>
+      </div>
     </base-card>
   </section>
 </the-layout>
