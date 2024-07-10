@@ -1,17 +1,22 @@
-<ng-template #btnContent><ng-content /></ng-template>
+<ng-template #baseButton>
+  <button
+    mat-flat-button
+    [class.full_width]="fullWidth"
+    [disabled]="disabled"
+    [color]="color"
+  >
+    <ng-content />
+  </button>
+</ng-template>
 
 @if (to) {
 
 <a [routerLink]="to">
-  <button mat-raised-button>
-    <ng-container *ngTemplateOutlet="btnContent" />
-  </button>
+  <ng-container *ngTemplateOutlet="baseButton" />
 </a>
 
 } @else {
 
-<button mat-raised-button>
-  <ng-container *ngTemplateOutlet="btnContent" />
-</button>
+<ng-container *ngTemplateOutlet="baseButton" />
 
 }
