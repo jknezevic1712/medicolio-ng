@@ -6,14 +6,17 @@
         <base-button>Add New Patient</base-button>
       </div>
 
-      <div content class="patient-list">
-        @for (patient of mockPatients; track patient.id) {
-        <div class="patient">
-          <p>{{ patient.name }}</p>
-          <p>{{ patient.pin }}</p>
-        </div>
+      <ng-container content>
+        @if (mockPatients.length < 1) {
+
+        <p class="dashboard-content-no_content_text">No patients added yet.</p>
+
+        } @else {
+
+        <patient-list [patientList]="mockPatients" />
+
         }
-      </div>
+      </ng-container>
     </base-card>
   </section>
 </the-layout>

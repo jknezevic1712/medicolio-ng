@@ -1,0 +1,8 @@
+<div class="patient-list">
+  @for (patient of patientList; track patient.id) {
+  <div class="patient">
+    <p>{{ patient.name }}</p>
+    <p>{{ patient.pin }}</p>
+  </div>
+  }
+</div>

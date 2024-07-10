@@ -3,6 +3,7 @@ import { Component } from '@angular/core';
 import { BaseCardComponent } from '@app/components/shared/base-card/base-card.component';
 import { BaseButtonComponent } from '@app/components/shared/base-button/base-button.component';
 import { LayoutComponent } from '@app/components/shared/layout/layout.component';
+import PatientListComponent from '@app/components/dashboard/patient-list.component';
 // utils
 import { RouterOutlet } from '@angular/router';
 import { Patient } from '@app/libs/types/General';
@@ -15,6 +16,7 @@ import { Patient } from '@app/libs/types/General';
     BaseCardComponent,
     BaseButtonComponent,
     LayoutComponent,
+    PatientListComponent,
   ],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.sass',
