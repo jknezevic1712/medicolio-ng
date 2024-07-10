@@ -14,12 +14,26 @@
         >
           <mat-form-field>
             <mat-label>Email</mat-label>
-            <input name="email" type="email" matInput ngModel required />
+            <input
+              name="email"
+              type="email"
+              autocomplete="email"
+              matInput
+              ngModel
+              required
+            />
           </mat-form-field>
 
           <mat-form-field>
             <mat-label>Password</mat-label>
-            <input name="password" type="password" matInput ngModel required />
+            <input
+              name="password"
+              type="password"
+              autocomplete="current-password"
+              matInput
+              ngModel
+              required
+            />
           </mat-form-field>
 
           @if (!isLogin) {
@@ -29,6 +43,7 @@
             <input
               name="name"
               type="text"
+              autocomplete="name"
               matInput
               ngModel
               [required]="!isLogin"
