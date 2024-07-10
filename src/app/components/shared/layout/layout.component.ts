@@ -12,4 +12,4 @@ import { RouterOutlet } from '@angular/router';
   styleUrl: './layout.component.sass',
   encapsulation: ViewEncapsulation.None,
 })
-export class LayoutComponent {}
+export default class LayoutComponent {}

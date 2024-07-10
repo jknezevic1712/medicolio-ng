@@ -12,4 +12,4 @@ import {
   templateUrl: 'base-card.component.html',
   imports: [MatCard, MatCardHeader, MatCardContent, MatCardActions],
 })
-export class BaseCardComponent {}
+export default class BaseCardComponent {}

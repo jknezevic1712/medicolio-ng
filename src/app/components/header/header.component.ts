@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 // components
-import { BaseButtonComponent } from '@app/components/shared/base-button/base-button.component';
-import { LibraryTitle } from './library-title/library-title.component';
+import BaseButtonComponent from '@app/components/shared/base-button/base-button.component';
+import LibraryTitle from './library-title/library-title.component';
 // utils
 import { RouterLink } from '@angular/router';
 

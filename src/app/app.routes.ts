@@ -9,20 +9,18 @@ export const routes: Routes = [
   {
     path: 'dashboard',
     loadComponent: () =>
-      import('./pages/dashboard/dashboard.component').then(
-        (m) => m.DashboardComponent
-      ),
+      import('./pages/dashboard/dashboard.component').then((m) => m.default),
   },
   {
     path: 'auth',
     loadComponent: () =>
-      import('./pages/auth/auth.component').then((m) => m.AuthComponent),
+      import('./pages/auth/auth.component').then((m) => m.default),
   },
   {
     path: '**',
     loadComponent: () =>
       import('./pages/page-not-found/page-not-found.component').then(
-        (m) => m.PageNotFoundComponent
+        (m) => m.default
       ),
   },
 ];

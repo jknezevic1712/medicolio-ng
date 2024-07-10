@@ -6,4 +6,4 @@ import { Component } from '@angular/core';
   templateUrl: 'library-title.component.html',
   styleUrl: 'library-title.component.sass',
 })
-export class LibraryTitle {}
+export default class LibraryTitle {}

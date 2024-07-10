@@ -1,8 +1,8 @@
 import { Component } from '@angular/core';
 // components
-import { BaseCardComponent } from '@app/components/shared/base-card/base-card.component';
-import { BaseButtonComponent } from '@app/components/shared/base-button/base-button.component';
-import { LayoutComponent } from '@app/components/shared/layout/layout.component';
+import BaseCardComponent from '@app/components/shared/base-card/base-card.component';
+import BaseButtonComponent from '@app/components/shared/base-button/base-button.component';
+import LayoutComponent from '@app/components/shared/layout/layout.component';
 import PatientListComponent from '@app/components/dashboard/patient-list.component';
 // utils
 import { RouterOutlet } from '@angular/router';
@@ -21,7 +21,7 @@ import { Patient } from '@app/libs/types/General';
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.sass',
 })
-export class DashboardComponent {
+export default class DashboardComponent {
   mockPatients: Patient[] = [
     {
       id: '1',

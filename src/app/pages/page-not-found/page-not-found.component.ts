@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 // components
-import { BaseButtonComponent } from '@app/components/shared/base-button/base-button.component'; // utils
-import { LayoutComponent } from '@app/components/shared/layout/layout.component';
+import BaseButtonComponent from '@app/components/shared/base-button/base-button.component'; // utils
+import LayoutComponent from '@app/components/shared/layout/layout.component';
 // utils
 import { Location } from '@angular/common';
 
@@ -12,7 +12,7 @@ import { Location } from '@angular/common';
   styleUrl: 'page-not-found.component.sass',
   imports: [BaseButtonComponent, LayoutComponent],
 })
-export class PageNotFoundComponent {
+export default class PageNotFoundComponent {
   constructor(private location: Location) {}
 
   handleNavToPrevPage() {

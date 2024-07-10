@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 // components
-import { LayoutComponent } from '@app/components/shared/layout/layout.component';
-import { BaseCardComponent } from '@app/components/shared/base-card/base-card.component';
+import LayoutComponent from '@app/components/shared/layout/layout.component';
+import BaseCardComponent from '@app/components/shared/base-card/base-card.component';
+import BaseButtonComponent from '@app/components/shared/base-button/base-button.component';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
-import { BaseButtonComponent } from '@app/components/shared/base-button/base-button.component';
 // utils
 import { FormsModule, NgForm } from '@angular/forms';
 
@@ -22,7 +22,7 @@ import { FormsModule, NgForm } from '@angular/forms';
     BaseButtonComponent,
   ],
 })
-export class AuthComponent {
+export default class AuthComponent {
   isLogin = true;
 
   get authTypeSwitchText() {

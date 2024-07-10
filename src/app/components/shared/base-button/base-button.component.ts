@@ -12,7 +12,7 @@ import { RouterLink } from '@angular/router';
   styleUrl: 'base-button.component.sass',
   imports: [MatButtonModule, CommonModule, RouterLink],
 })
-export class BaseButtonComponent {
+export default class BaseButtonComponent {
   @Input({ required: false }) to?: string;
   @Input({ required: false }) fullWidth?: boolean;
   @Input({ required: false }) disabled?: boolean;
