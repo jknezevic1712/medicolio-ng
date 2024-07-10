@@ -1,3 +1,5 @@
+@import "src/app/libs/styles/utils.sass"
+
 .header
   display: flex
   flex-wrap: wrap
@@ -7,7 +9,7 @@
   gap: 1rem
   border-bottom: 0.2rem solid var(--mat-app-text-color)
 
-  @media screen and (min-width: 768px)
+  @media screen and (min-width: $breakpoint-md)
     flex-wrap: nowrap
     justify-content: space-between
     gap: 0
