@@ -2,13 +2,17 @@
   <section class="dashboard">
     <base-card>
       <div header class="dashboard-card-header">
-        <h2>Title</h2>
-        <base-button>Lala</base-button>
+        <h2>Patients</h2>
+        <base-button>Add New Patient</base-button>
       </div>
 
-      <div content class="dashboard-card-content">
-        <p>Content</p>
-        <p>It's great!</p>
+      <div content class="patient-list">
+        @for (patient of mockPatients; track patient.id) {
+        <div class="patient">
+          <p>{{ patient.name }}</p>
+          <p>{{ patient.pin }}</p>
+        </div>
+        }
       </div>
     </base-card>
   </section>
