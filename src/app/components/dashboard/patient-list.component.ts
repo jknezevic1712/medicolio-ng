@@ -13,4 +13,6 @@ export default class PatientListComponent {
     required: true,
   })
   patientList: Patient[] = [];
+
+  isModalOpen = false;
 }
